@@ -12,15 +12,14 @@ import javax.swing.JOptionPane;
  *
  * @author JOVA
  */
-public class InternalForm extends javax.swing.JInternalFrame {
+public class InternalFormColas extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form InternalForm
      */
     Burbujasimple bs = new Burbujasimple();
-    public InternalForm() {
+    public InternalFormColas() {
         initComponents();
-        txtArray.setText("0");
         
     }
 
@@ -127,12 +126,11 @@ public class InternalForm extends javax.swing.JInternalFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 414, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel3)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
-                        .addGap(18, 18, 18))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,28 +201,12 @@ public class InternalForm extends javax.swing.JInternalFrame {
           int numeros[] = getArrayInt(txtArray.getText().split(","));
         String metodo = lbTittle.getText();
         switch(metodo){
-            case "Burbuja Simple":
-                txtResult.setText(new Burbujasimple().ordenar(numeros)); 
-                break;
-            case "Burbuja Mejorada":
-                txtResult.setText(new Burbujamejorada().ordenar(numeros)); 
-                break;
-            case "Inserción":
-                txtResult.setText(new Insercion().ordenar(numeros)); 
-                break;
-            case "QuickSort":
-                txtResult.setText(new Quicksort().ordenarA(numeros)); 
-                break;
-            case "MergeSort":
-                txtResult.setText(new Mergesort().ordenar(numeros)); 
-                break;
             case "Colas":
                 txtResult.setText(new Colas().ordenarA(numeros)); 
                 break;
             case "Pilas":
                 txtResult.setText(new Pilas().ordenarA(numeros)); 
                 break;
-                
             case "Programa 1":
                 String search = JOptionPane.showInputDialog(this, "Que número deseas buscar");
                 int index = Integer.parseInt(search);
@@ -239,7 +221,7 @@ public class InternalForm extends javax.swing.JInternalFrame {
                 txtResult.setText(new Prog3().ordenar()); 
                 break;
             case "Programa 4":
-                txtResult.setText(new Prog4().ordenar()); 
+                txtResult.setText(new Prog4().ordenar());
                     
         }  
         }

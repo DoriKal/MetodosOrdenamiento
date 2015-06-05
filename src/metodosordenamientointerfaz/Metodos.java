@@ -12,7 +12,7 @@ public class Metodos extends javax.swing.JFrame {
      * Creates new form Metodos
      */
     InternalForm intForm = new InternalForm();
-    
+    InternalFormColas colas = new InternalFormColas();
     public Metodos() {
         initComponents();
         //Burbuja.setSelected(true);
@@ -210,7 +210,8 @@ public class Metodos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BurbujaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BurbujaActionPerformed
-         //JOptionPane.showMessageDialog(null, "Llamar a un poanel externo para correrjhgjh!!!");
+        colas.setVisible(false); 
+        //JOptionPane.showMessageDialog(null, "Llamar a un poanel externo para correrjhgjh!!!");
         intForm.lbTittle.setText("Burbuja Simple");
 
 	 // Se mete el internal en el JDesktopPane
@@ -220,7 +221,8 @@ public class Metodos extends javax.swing.JFrame {
     }//GEN-LAST:event_BurbujaActionPerformed
 
     private void InsercionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InsercionActionPerformed
-       // Pasa el titulo del método
+        colas.setVisible(false);   
+        // Pasa el titulo del método
         intForm.lbTittle.setText("Inserción");
         // Se mete el internal en el JDesktopPane
 	JPanelDesktop.add(intForm);
@@ -229,6 +231,7 @@ public class Metodos extends javax.swing.JFrame {
     }//GEN-LAST:event_InsercionActionPerformed
 
     private void BurbujaMejoradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BurbujaMejoradaActionPerformed
+        colas.setVisible(false);
         // Pasa el titulo del método
         intForm.lbTittle.setText("Burbuja Mejorada");
         // Se mete el internal en el JDesktopPane
@@ -238,15 +241,17 @@ public class Metodos extends javax.swing.JFrame {
     }//GEN-LAST:event_BurbujaMejoradaActionPerformed
 
     private void ListSencillasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListSencillasActionPerformed
+        intForm.setVisible(false);
         // Pasa el titulo del método
-        intForm.lbTittle.setText("Listas Sencillas");
+        colas.lbTittle.setText("Listas Sencillas");
         // Se mete el internal en el JDesktopPane
-	JPanelDesktop.add(intForm);
+	JPanelDesktop.add(colas);
 	// Se visualiza el JInternalFrame 
-	intForm.setVisible(true);
+	colas.setVisible(true);
     }//GEN-LAST:event_ListSencillasActionPerformed
 
     private void QuickSortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuickSortActionPerformed
+        colas.setVisible(false);
         // Pasa el titulo del método
         intForm.lbTittle.setText("Quick Sort");
         // Se mete el internal en el JDesktopPane
@@ -256,6 +261,7 @@ public class Metodos extends javax.swing.JFrame {
     }//GEN-LAST:event_QuickSortActionPerformed
 
     private void MergeSortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MergeSortActionPerformed
+        colas.setVisible(false);
         // Pasa el titulo del método
         intForm.lbTittle.setText("Merge Sort");
         // Se mete el internal en el JDesktopPane
@@ -265,6 +271,7 @@ public class Metodos extends javax.swing.JFrame {
     }//GEN-LAST:event_MergeSortActionPerformed
 
     private void PilasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PilasActionPerformed
+        //intForm.setVisible(false);
         // Pasa el titulo del método
         intForm.lbTittle.setText("Pilas");
         // Se mete el internal en el JDesktopPane
@@ -274,26 +281,66 @@ public class Metodos extends javax.swing.JFrame {
     }//GEN-LAST:event_PilasActionPerformed
 
     private void ColasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ColasActionPerformed
+        intForm.setVisible(false);
         // Pasa el titulo del método
-        intForm.lbTittle.setText("Colas");
+        colas.lbTittle.setText("Colas");
         // Se mete el internal en el JDesktopPane
-	JPanelDesktop.add(intForm);
+	JPanelDesktop.add(colas);
 	// Se visualiza el JInternalFrame 
-	intForm.setVisible(true);
+	colas.setVisible(true);
     }//GEN-LAST:event_ColasActionPerformed
 
     private void ListLigadasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListLigadasActionPerformed
+        intForm.setVisible(false);
         // Pasa el titulo del método
-        intForm.lbTittle.setText("Listas Ligadas");
+        colas.lbTittle.setText("Listas Ligadas");
         // Se mete el internal en el JDesktopPane
-	JPanelDesktop.add(intForm);
+	JPanelDesktop.add(colas);
 	// Se visualiza el JInternalFrame 
-	intForm.setVisible(true);
+	colas.setVisible(true);
     }//GEN-LAST:event_ListLigadasActionPerformed
 
     private void CBOtherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBOtherActionPerformed
        if(CBOther.getSelectedItem() != null){
-           JOptionPane.showMessageDialog(this,CBOther.getSelectedIndex());
+        int select = CBOther.getSelectedIndex();
+        switch(select){
+           case 0:
+             colas.setVisible(false);
+            // Pasa el titulo del método
+            intForm.lbTittle.setText("Programa 1");
+            // Se mete el internal en el JDesktopPane
+            JPanelDesktop.add(intForm);
+            // Se visualiza el JInternalFrame 
+            intForm.setVisible(true);
+           break;
+           case 1:
+             colas.setVisible(false);
+            // Pasa el titulo del método
+            intForm.lbTittle.setText("Programa 2");
+            // Se mete el internal en el JDesktopPane
+            JPanelDesktop.add(intForm);
+            // Se visualiza el JInternalFrame 
+            intForm.setVisible(true);
+           break;
+           case 2:
+             colas.setVisible(false);
+            // Pasa el titulo del método
+            intForm.lbTittle.setText("Programa 3");
+            // Se mete el internal en el JDesktopPane
+            JPanelDesktop.add(intForm);
+            // Se visualiza el JInternalFrame 
+            intForm.setVisible(true);
+           break;
+           case 3:
+             colas.setVisible(false);
+            // Pasa el titulo del método
+            intForm.lbTittle.setText("Programa 4");
+            // Se mete el internal en el JDesktopPane
+            JPanelDesktop.add(intForm);
+            // Se visualiza el JInternalFrame 
+            intForm.setVisible(true);
+           break;
+        }
        }
         //CBOther.getSelectedItem();
     }//GEN-LAST:event_CBOtherActionPerformed
